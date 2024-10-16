@@ -1,0 +1,17 @@
+---
+import Accordion from "../ui/Accordion.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+import Section from "./Section.astro";
+
+const description = "Notre école est conçue pour accompagner votre enfant de la maternelle jusqu'au cycle superieur, fesant de vos enfants des apprenants heureux et responsables evoluant dans un cadre familier au fil des années.";
+---
+
+<Section id="services">
+  <div class="mt-[140px]">
+    <SectionTitle
+      sectionTitle="Nos Formations"
+      description={description}
+    />
+    <Accordion />
+  </div>
+</Section>

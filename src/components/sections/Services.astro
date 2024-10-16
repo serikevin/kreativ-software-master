@@ -1,0 +1,73 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import ServiceCard from "../ui/ServiceCard.astro";
+import Section from "./Section.astro";
+
+
+import test16 from "../../assets/test16.png";
+import test17 from "../../assets/test17.png";
+import test18 from "../../assets/test18.png";
+import test15 from "../../assets/test15.png";
+import test11 from "../../assets/pics/test11.png";
+
+
+
+const cards = [
+  {
+    index: 1,
+    titleTop: "Ecole primaire ",
+    titleBottom: "et prescolaire",
+    img: test18,
+    alt: "SEO",
+    link: "https://google.com",
+  },
+  {
+    index: 2,
+    titleTop: "College ",
+    titleBottom: "6e à la 3e",
+    img: test11,
+    alt: "SEO",
+    link: "https://google.com",
+  },
+  {
+    index: 3,
+    titleTop: "Lycée",
+    titleBottom: "2nd à la Terminale",
+    img: test16,
+    alt: "SEO",
+    link: "https://google.com",
+  },
+  {
+    index: 1,
+    titleTop: "Grandes écoles",
+    titleBottom: "et Formation Professionelle",
+    img: test17,
+    alt: "SEO",
+    link: "https://google.com",
+  },
+ 
+];
+
+const description =
+  "Dans notre établissement scolaire nous offrons plusieurs formations pour differents cycle d'etudes scolaires";
+---
+
+<Section>
+  <div class="mt-[140px] mb-5">
+    <SectionTitle sectionTitle="Services" description={description} />
+    <div class="grid lg:grid-cols-2 lg:grid-rows-3 gap-10">
+      {
+        cards.map((card) => (
+          <ServiceCard
+            index={card.index}
+            titleTop={card.titleTop}
+            titleBottom={card.titleBottom}
+            img={card.img}
+            alt={card.alt}
+            link={card.link}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Section>
